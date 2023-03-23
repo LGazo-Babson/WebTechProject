@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+      body{background-color: rgb(236, 235, 235);}
+        form{background-color: white;}
+        h1{text-align: center;}
+        .form{display: flex;
+        justify-content: center;}
+    </style>
+    <link rel="icon" href="images/favicon.ico" type="image/ico" />
+</head>
+<body>
+    <h1>Contact Form</h1>
+    <div class="form">
+    <form method="post" action="https://oim-apis.up.railway.app/form2">
+        <fieldset>
+            <legend>Your Information:</legend>
+        <div>
+            <label for="FName">First Name:</label>
+      <input
+        type="text"
+        id="FName"
+        name="Name"
+        maxlength="25"
+        placeholder="Enter Your First Name Here"
+      />
+      </div>
+      <div>
+        <label for="LName">Last Name:</label>
+  <input
+    type="text"
+    id="LName"
+    name="Name"
+    maxlength="25"
+    placeholder="Enter Your Last Name Here"
+  />
+  </div>
+      <div>
+      <label for="Email">Email:</label>
+      <input
+        type="text"
+        id="Email"
+        name="Email"
+        maxlength="75"
+        placeholder="Enter Your Email Here"
+        />
+        </div>
+            <div>
+                <label for="Comments">Leave Your Comments:</label>
+        </div>
+        <div>
+          <textarea
+            id="Comments"
+            name="Comments"
+            rows="3"
+            cols="30"
+            placeholder="Leave Your Comments Here"
+          ></textarea>
+            </div>
+            <div>
+                <input type="checkbox" name="email" value="email" checked> 
+                <label for="email">Sign me up for email updates</label> 
+            </div>
+            <div>
+                <button>Submit</button> 
+                <button>Reset</button>
+            </div>
+          </fieldset>
+        </form>
+        </div>
+</body>
+</html>
