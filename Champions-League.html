@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
 <style>
-body{
-  background-color: #b0dcf6;
-}
+body {
+      background-image: linear-gradient(to right, rgb(219, 242, 248), rgb(54, 200, 248));
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
       .navbar {
   overflow: hidden;
-  background-color: #4b6575;
+  background-color: rgb(104, 214, 251);
 }
 
 .navbar a {
@@ -24,36 +28,12 @@ body{
   text-decoration: none;
 }
 
-.stad {
-  float: left;
-  overflow: hidden;
+
+.navbar a:hover {
+  background-color: rgb(170, 218, 233);
 }
 
-.stad .dropbtn{
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .stad:hover .dropbtn {
-  background-color: rgb(131, 185, 203);
-}
-
-.stad-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.stad-content a {
+a {
   float: none;
   color: black;
   padding: 12px 16px;
@@ -62,44 +42,50 @@ body{
   text-align: left;
 }
 
-.stad-content a:hover {
-  background-color: #ddd;
+article {
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: auto;
+  text-align: center;
+  width: 100%;
 }
 
-.stad:hover .stad-content {
-  display: block;
+h1 {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      color: rgb(69, 74, 79);
+      font-size: 30px;
+    }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  background-color: rgb(104, 214, 251);
+  padding: 10px;
+  justify-self: start;
+  align-self: end;
 }
-  
-  article {
-      min-height: 100vh;
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      grid-template-columns: 100vw;
-  }
-  
-  h1{
-    text-align: center;
-    margin-left: auto;
-  margin-right: auto;}
-  
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(7, auto);
-    background-color:#b0dcf6;
-    padding: 1px;
-    justify-self: start;
-  align-self: end;}
-  .grid-item {
-    background-color: #b0dcf6;
-    border: none;
-    padding: 20px;
-    font-size: 15px;
-    color: black;
-    justify-self:start;
-    align-self: start;
-  }
-  a{text-decoration: none;
-  color: black;}
+.grid-item {
+  background-color: rgb(104, 214, 251);
+  border: none;
+  padding: 20px;
+  font-size: 15px;
+  color: white;
+  justify-self: start;
+  align-self: start;
+}
+.grid-item:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
   img {
   display: block;
   margin-left: auto;
@@ -112,17 +98,8 @@ body{
     <div class="navbar">
       <a href="index.html">Home</a>
       <a href="gallery.html">Gallery</a>
-      <div class="stad">
-        <button class="dropbtn"><a href= "Stadium.html">Stadum Ranking</a></button>
-        <div class="stad-content">
-          <a href="Stadium1">1</a>
-          <a href="Stadium2">2</a>
-          <a href="Stadium3">3</a>
-          <a href="Stadium4">4</a>
-          </div>
-          </div>
+      <a href= "Stadium.html">Stadium Ranking</a>
       <a href="History.html"> History </a>
-      <a href="Geo-Map.html"> Geo Map </a>
       <a href="Champions-League.html"> Champions League </a>
       <a href="sitemap.html">Site Map</a>
         </div>
@@ -138,20 +115,15 @@ body{
                 <a href="https://www.uefa.com/uefachampionsleague/standings/"><img src="images/CL.png" title="Champions League"></a>
                 </p>
                 </main>
-  
-<footer>
-    <br>
-            <div class="grid-container">
-              <div class="grid-item"><strong><a href="index.html">Home</a></strong></div>
-              <div class="grid-item"><strong><a href="Gallery.html">Gallery</a></strong></div>
-              <div class="grid-item"><strong><a href="Stadium.html">Stadium Ranking</a></strong></div>  
-              <div class="grid-item"><strong><a href="History.html"> History </a></strong></div>
-              <div class="grid-item"><strong><a href="Geo-Map.html"> Geo Map </a></strong></div>
-              <div class="grid-item"><strong><a href="Champions-League.html"> Champions League </a></strong></div>  
-              <div class="grid-item"><strong>Contact</strong>
-              <div><a href="contact.html">Link to Form</a></div>
-            </div>
-          </br>
-      </footer>
+                <footer>
+                  <div class="grid-container">
+                    <div class="grid-item"><strong><a href="index.html">Home</a></strong></div>
+                    <div class="grid-item"><strong><a href="Gallery.html">Gallery</a></strong></div>
+                    <div class="grid-item"><strong><a href="Stadium.html">Stadium Ranking</a></strong></div>  
+                    <div class="grid-item"><strong><a href="History.html">History</a></strong></div>
+                    <div class="grid-item"><strong><a href="Champions-League.html">Champions League</a></strong></div>  
+                    <div class="grid-item"><strong><a href="contact.html">Contact</a></strong></div>
+                  </div>
+                </footer>
   </body>
 </html>

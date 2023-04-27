@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Stadium Ranking</title>
     <style>
-      
-      body{
-  background-color: #b0dcf6;
-}
+     body {
+      background-image: linear-gradient(to right, rgb(219, 242, 248), rgb(54, 200, 248));
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
       .navbar {
   overflow: hidden;
-  background-color: #4b6575;
+  background-color: rgb(104, 214, 251);
 }
 
 .navbar a {
@@ -25,36 +28,12 @@
   text-decoration: none;
 }
 
-.stad {
-  float: left;
-  overflow: hidden;
+
+.navbar a:hover {
+  background-color: rgb(170, 218, 233);
 }
 
-.stad .dropbtn{
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .stad:hover .dropbtn {
-  background-color: rgb(131, 185, 203);
-}
-
-.stad-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.stad-content a {
+a {
   float: none;
   color: black;
   padding: 12px 16px;
@@ -63,50 +42,68 @@
   text-align: left;
 }
 
-.stad-content a:hover {
-  background-color: #ddd;
+article {
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: auto;
+  text-align: center;
+  width: 100%;
 }
 
-.stad:hover .stad-content {
+h1 {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      color: rgb(69, 74, 79);
+      font-size: 30px;
+    }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  background-color: rgb(104, 214, 251);
+  padding: 10px;
+  justify-self: start;
+  align-self: end;
+}
+.grid-item {
+  background-color: rgb(104, 214, 251);
+  border: none;
+  padding: 20px;
+  font-size: 15px;
+  color: white;
+  justify-self: start;
+  align-self: start;
+}
+.grid-item:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+img {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro{
+         text-align: center;
 }
         
-        article {
-            min-height: 100vh;
-            display: grid;
-            grid-template-rows: auto 1fr auto;
-            grid-template-columns: 100vw;
-        }
-        
-        h1{
-          text-align: center;
-          margin-left: auto;
-        margin-right: auto;}
-
-        .intro{
-            text-align: center;
-        }
-        
-        .grid-container {
-          display: grid;
-          grid-template-columns: repeat(7, auto);
-          background-color:#b0dcf6;
-          padding: 10px;
-          justify-self: start;
-        align-self: end;}
-        .grid-item {
-          background-color: #b0dcf6;
-          border: none;
-          padding: 20px;
-          font-size: 15px;
-          color: black;
-          justify-self:start;
-          align-self: start;
-        }
-
-        a{text-decoration: none;
-        color: black;}
-        
+.title{
+  text-align: left;
+  font-size: 25px;
+}
+main {
+  color: rgb(69, 74, 79);
+}
         </style>
             <link rel="icon" href="images/favicon.ico" type="image/ico" />
         </head>
@@ -114,20 +111,10 @@
           <div class="navbar">
             <a href="index.html">Home</a>
             <a href="gallery.html">Gallery</a>
-            <div class="stad">
-              <button class="dropbtn"><a href= "Stadium.html">Stadum Ranking</a></button>
-              <div class="stad-content">
-                <a href="Stadium1">1</a>
-                <a href="Stadium2">2</a>
-                <a href="Stadium3">3</a>
-                <a href="Stadium4">4</a>
-                </div>
-                </div>
+            <a href= "Stadium.html">Stadium Ranking</a>
             <a href="History.html"> History </a>
-            <a href="Geo-Map.html"> Geo Map </a>
             <a href="Champions-League.html"> Champions League </a>
             <a href="sitemap.html">Site Map</a>
-              </div>
               </div>
         
                   <article>
@@ -139,10 +126,15 @@
                     <p class="intro">
                         Every stadium is different. The ranking system incorporates four key metrics. The atmosphere, viewing angles, architecture, and surrounding area. These four metrics incorporate a hollisitc perspective at futbol stadiums. They are beauty, art, economic staples, and create a local clture. 
                         The atmosphere includes the fan culture, chants, and proximity to the game pitch within the stadium. Viewing includes the ability to see the game and any obstructions or odd angles. Architecture analyzes the building's design and creative features that provide a taste of art for all futbol fans.
-                        Finally, the surrounding area incorporates the town or city and whether this improves or decreases the value of the stadium. It is difficult to properly asses a stadium on these four metrics, but is conducted through experiences, references, research, and futbol knowlegde.
+                        Finally, the surrounding area incorporates the town or city and whether this improves or decreases the value of the stadium. It is difficult to properly asses a stadium on these four metrics, but is conducted through experiences, references, research, and football knowledge.
                       </p>
                     <p>
-                        <div><strong>#12 - Stade Louis II</strong></div>
+                      <div id="stade-louis-ii"></div>
+                      <div class="title"><strong>#12 Stade Louis II (Monaco)</strong>
+                        
+                          <button onclick="voteUp()">👍</button>
+                          <button onclick="voteDown()">👎</button>
+                        </div>
                         <div><img src="images/StadeLouis.jpg" alt="StadeLouisII" title="StadeLouisII" width="350px" height="200px"></div>
                         <div>
                             Being in the top 12 for stadiums in Europe is a feat nonetheless. However, there are a few reasons for placing Stade Louis at twelth compared to the other stadiums listed. The architecture is marvelous, images from the mountaintops, the unqiue rooftop design screams Monaco, and the structure
@@ -152,96 +144,344 @@
                         </div>
                     </p>
                     <p>
-                        <div><strong>#11 - Sukru Saracoglu Stadium</strong></div>
+                      <div id="sukru-saracoglu-stadium"></div>
+                      <div class="title"><strong>#11 Sukru Saracoglu Stadium (Istanbul, Turkey)</strong>
+                        
+                          <button onclick="voteUp()">👍</button>
+                          <button onclick="voteDown()">👎</button>
+                        </div>
                         <div><img src="images/Sukru.jpg" alt="Sukru" title="Sukru" width="350px" height="200px"></div>
                         <div>
-                            Sukru Saracoglu Stadium ... 
+                          The Sukru Saracoglu Stadium in Turkey is one of the country's most iconic football arenas. It has been the home of Fenerbahce SK since 1908, and the stadium has undergone several renovations to improve its facilities and enhance the overall fan experience. The ranking system incorporates four key metrics that 
+                          can be used to assess the stadium's value: atmosphere, viewing angles, architecture, and surrounding area. The atmosphere at the Sukru Saracoglu Stadium is known to be electric, with passionate fans who create an intense and supportive environment. The viewing angles are also impressive, with excellent 
+                          sightlines and clear views of the pitch. The stadium's architecture is striking and modern, with unique design features that provide a taste of art for all football fans. The downside to this stadium when compared to the remaining 10 stadiums, is the compeititon within the stadium and potential danger once 
+                          outside the secure stadium. Nonetheless, the Sukru Saracoglu Stadium is a top-tier football stadium that exemplifies the beauty, art, economic staples, and local culture that make football such a beloved sport.
                         </div>
                     </p>
                     <p>
-                        <div><strong>#10 - Arena Nationala</strong></div>
+                      <div id="arena-nationala"></div>
+                      <div class="title"><strong>#10 Arena Nationala (Bucharest, Romania)</strong>
+                        
+                          <button onclick="voteUp()">👍</button>
+                          <button onclick="voteDown()">👎</button>
+                        </div>
                         <div><img src="images/arenanationala.jpg" alt="Arena Nationala" title="Arena Nationala" width="350px" height="200px"></div>
                         <div>
-                             ... 
+                          The Arena Nationala in Bucharest, Romania, is a shining example of a modern football stadium that excels in all four key metrics used to assess its value. The stadium's atmosphere is electric, with passionate fans filling the stands and creating an unforgettable experience for all in attendance. The viewing
+                          angles are outstanding, with clear sightlines and no obstructions, ensuring that every fan can enjoy the game to the fullest. The stadium's architecture is sleek and modern, featuring state-of-the-art facilities that cater to all fan needs, from seating to concessions. The surrounding area is bustling with life, 
+                          offering an array of dining and entertainment options that add to the overall experience. The combination of these four metrics creates a truly holistic perspective of the stadium, demonstrating its value not just as a sporting venue but as a cultural and economic staple of the city. The downside to Arena Nationale 
+                          is the lack of history within the stadium as it was built in 2011. These stadiums are history caputured in time and a reason why Arena Nationale is 10th. Overall, an amazing stadium, place, and a landmark to stop in Europe.
                         </div>
                     </p>
                     <p>
-                        <div><strong>#9 - Anfield Stadium</strong></div>
+                      <div id="anfield-stadium"></div>
+                      <div class="title"><strong>#9 Anfield Stadium (Liverpool, England)</strong>
+                        
+                          <button onclick="voteUp()">👍</button>
+                          <button onclick="voteDown()">👎</button>
+                        </div>
                         <div><img src="images/Anfield.jpg" alt="Anfield" title="Anfield" width="350px" height="200px"></div>
                         <div>
-                             ... 
+                          Anfield, situated in Liverpool, UK, has consistently ranked high on all four key metrics of the ranking system. The stadium is known for its captivating atmosphere, fueled by passionate fans and iconic chants, providing an electrifying experience for every football game. Furthermore, the stadium offers excellent 
+                          viewing angles, ensuring an unobstructed view of the game from any seat. The stadium's architecture is also impressive, featuring the iconic Kop stand and a newly renovated main stand, which adds to the stadium's artistic appeal. Additionally, the surrounding area of Anfield, located in the heart of Liverpool, 
+                          adds to the stadium's value, with its rich history and cultural significance. It is hard to knock Anfield, but the proximity and similarity to other English stadiums is the reason I put a few other European stadiums above Anfield. Overall, Anfield is an exceptional stadium that provides a comprehensive experience
+                          for football enthusiasts, making it one of the world's most remarkable stadiums.
                         </div>
                     </p>
                     <p>
-                        <div><strong>#8 - Celtic Park</strong></div>
+                      <div id="celtic-park"></div>
+                      <div class="title"><strong>#8 Celtic Park (Glasgow, Scotland)</strong>
+                        
+                          <button onclick="voteUp()">👍</button>
+                          <button onclick="voteDown()">👎</button>
+                        </div>
                         <div><img src="images/CelticPark.jpg" alt="Celtic Park" title="Celtic Park" width="350px" height="200px"></div>
                         <div>
-                             ... 
+                          Celtic Park, nestled in the heart of Glasgow, Scotland, stands out as a premier football stadium on a global scale. The ranking system utilized to evaluate futbol stadiums incorporates four critical metrics, all of which Celtic Park excels at. The atmosphere within the stadium is nothing short of electric, as the 
+                          ardent fans of Celtic FC create an unrivaled, passionate environment. Viewing angles at Celtic Park are impeccable, with each seat offering an unobstructed view of the pitch. The stadium's architecture is a breathtaking masterpiece, featuring unique structures and design elements. Moreover, the surrounding area is 
+                          steeped in cultural history and offers a captivating backdrop for a football match. There is very little downside to Celtic Park. The smallest complaint would be the lack of top-tier matches with the Champions League or regular matchplay. Celtic Park represents a perfect fusion of beauty, art, and economic stability,
+                          which should be inherent in any football stadium. It is undoubtedly a must-visit venue for any ardent football enthusiast, and one that truly encapsulates 
+                          the holistic essence of a top-tier futbol stadium.
                         </div>
                     </p>
                     <p>
-                        <div><strong>#7 - San Siro</strong></div>
+                      <div id="san-siro"></div>
+                      <div class="title"><strong>#7 San Siro (Miland, Italy)</strong>
+                        
+                          <button onclick="voteUp()">👍</button>
+                          <button onclick="voteDown()">👎</button>
+                        </div>
                         <div><img src="images/SanSiro.jpg" alt="San Siro" title="San Siro" width="350px" height="200px"></div>
                         <div>
-                             ... 
+                          San Siro stadium, situated in Milan, Italy, is globally recognized for its remarkable design, hosting two of Italy's most successful football clubs, Inter Milan and AC Milan. To evaluate its worthiness, a ranking system incorporating four key metrics is employed: atmosphere, viewing angles, architecture, and surrounding area. 
+                          The stadium's atmosphere stands out with its passionate fans and historic chants. The stadium also offers excellent viewing angles with no obstructions or blind spots. The San Siro's unique architectural features and design further add to its prestige. Lastly, the stadium's surrounding area, with its rich culture and history, 
+                          makes it a must-visit for football fans worldwide. These four metrics provide a holistic perspective on the beauty, art, economic staples, and local culture that the San Siro has created. As we move closer to #1, it is difficult to differentiate when it is mostly personal preferance. However, Milan is very expensive and the prices within 
+                          the San Siro are no joke. No soccer fan wants to burn a hole in their pocket while watching! Overall, the San Siro stadium stands as a true gem in the world of football, and its ranking based on these metrics is a testament to its worthiness.
                         </div>
                     </p>
                     <p>
-                        <div><strong>#6 - Allianz Arena</strong></div>
+                      <div id="allianz-stadium"></div>
+                      <div class="title"><strong>#6 Allianz Arena (Munich, Germany)</strong>
+                        
+                          <button onclick="voteUp()">👍</button>
+                          <button onclick="voteDown()">👎</button>
+                        </div>
                         <div><img src="images/Allianz.jpg" alt="Allianz Arena" title="Allianz Arena" width="350px" height="200px"></div>
                         <div>
-                             ... 
-                        </div>
+                          Allianz Arena Munich, Germany is a stadium that is highly regarded for its impressive ranking across the four key metrics of the ranking system. The atmosphere at Allianz Arena is one of the best in the world, with passionate fans and electrifying chants that create an unforgettable experience for all who attend. The stadium's design also 
+                          ensures that the viewing angles are excellent, allowing for an unobstructed view of the game and the ability to fully immerse oneself in the action on the pitch. In terms of architecture, Allianz Arena's innovative design is a stunning representation of art and engineering, making it a true marvel to behold. Finally, the surrounding area of 
+                          Munich adds to the stadium's overall value, as the city itself is a hub for culture, history, and entertainment. At this point it is very difficult to distinguish. Bayern is world-class and so is their stadium. From here on out the rankings are very subjective. All of these factors combined make Allianz Arena Munich, Germany one of the most 
+                          highly ranked and sought after football stadiums in the world.
+                         </div>
                     </p>
                     <p>
-                        <div><strong>#5 - Santiago Bernabeu</strong></div>
+                      <div id="santiago-bernabeu"></div>
+                      <div class="title"><strong>#5 Santiago Bernabeu (Madrid,Spain)</strong>
+                        
+                          <button onclick="voteUp()">👍</button>
+                          <button onclick="voteDown()">👎</button>
+                        </div>
                         <div><img src="images/SantiBern.png" alt="SantiBernbeu" title="SantiagoBernbeu" width="350px" height="200px"></div>
                         <div>
-                             ... 
-                        </div>
+                          The Santiago Bernabeu in Madrid, Spain, is a world-renowned football stadium that is highly ranked across the four key metrics of the ranking system. The atmosphere at the stadium is electric, with a passionate fan base that creates a buzzing and energetic environment, especially during matches. The stadium is designed in a way that provides an excellent viewing experience for spectators, ensuring that all seats have a clear view of the pitch. In terms of architecture, the Santiago Bernabeu is a stunning masterpiece that showcases the beauty and art of football stadiums. The stadium's unique design and features make it stand out as one of the most impressive and iconic stadiums in the world. Finally, the surrounding area of Madrid adds to the overall value of the stadium, with the city's rich culture and history providing an immersive experience for visitors. Overall, the Santiago Bernabeu Madrid Spain ranks highly across all four metrics, making it a must-visit destination for football fans from all around the world.</div>
                     </p>
                     <p>
-                        <div><strong>#4 - Signal Iduna Park</strong></div>
+                      <div id="signal-iduna-park"></div>
+                      <div class="title"><strong>#4 Signal Iduna Park (Dortmund, Germnay)</strong>
+                        
+                          <button onclick="voteUp()">👍</button>
+                          <button onclick="voteDown()">👎</button>
+                        </div>
                         <div><img src="images/BVB.jpg" alt="Signal Iduna Park" title="Signal Iduna Park" width="350px" height="200px"></div>
                         <div>
-                             ... 
-                        </div>
+                          Signal Iduna Park in Borussia Dortmund, Germany is a stadium that is highly ranked across all four key metrics of the ranking system. The atmosphere at Signal Iduna Park is unparalleled, with passionate fans who create an electric and buzzing environment during matches. The stadium's design ensures that all seats have a clear view of the pitch, providing an excellent viewing experience for spectators. In terms of architecture, Signal Iduna Park is a masterpiece that showcases the beauty and art of football stadiums. The stadium's unique features and design make it stand out as one of the most impressive and iconic stadiums in the world. Finally, the surrounding area of Dortmund adds to the overall value of the stadium, with the city's rich culture and history providing an immersive experience for visitors. Overall, Signal Iduna Park Borussia Dortmund, Germany ranks highly across all four metrics, making it a must-visit destination for football fans from around the world.</div>
                     </p>
                     <p>
-                        <div><strong>#3 - Old Trafford</strong></div>
+                      <div id="old-trafford"></div>
+                      <div class="title"><strong>#3 Old Trafford (Manchester, England)</strong>
+                        
+                          <button onclick="voteUp()">👍</button>
+                          <button onclick="voteDown()">👎</button>
+                        </div>
                         <div><img src="images/OldTrafford.jpg" alt="Old Trafford" title="Old Trafford" width="350px" height="200px"></div>
                         <div>
-                             ... 
-                        </div>
+                          Old Trafford in Manchester, UK is a stadium that is highly ranked across all four key metrics of the ranking system. The atmosphere at Old Trafford is legendary, with a passionate fan base that creates an electrifying and buzzing environment during matches. The stadium's design ensures that all seats have a clear view of the pitch, providing an excellent viewing experience for spectators. In terms of architecture, Old Trafford is a masterpiece that combines modern and classic elements to create a stunning and impressive football stadium. The surrounding area of Manchester adds to the overall value of the stadium, with the city's rich culture and history providing an immersive experience for visitors. Overall, Old Trafford Manchester, UK ranks highly across all four metrics, making it a must-visit destination for football fans from around the world. The stadium is also an economic staple for Manchester, attracting millions of tourists every year and providing a boost to the local economy.</div>
                         </p>
                         <p>
-                            <div><strong>#2 - Camp Nou</strong></div>
+                          <div id="camp-nou"></div>
+                          <div class="title"><strong>#2 Camp Nou (Barcelona, Spain)</strong>
+                        
+                              <button onclick="voteUp()">👍</button>
+                              <button onclick="voteDown()">👎</button>
+                            </div>
                             <div><img src="images/CampNou.jpg" alt="Camp Nou" title="Camp Nou" width="350px" height="200px"></div>
                             <div>
-                                 ... 
-                            </div>
+                              Camp Nou in Barcelona, Spain is a stadium that ranks highly across all four key metrics of the ranking system. The atmosphere is charged with an energetic and passionate fan base, creating an electric buzz during matches. The stadium's design guarantees an excellent viewing experience for spectators, with all seats offering an unobstructed view of the pitch. The architecture of Camp Nou is a masterpiece that exemplifies the beauty and art of football stadiums. Its unique design and features make it an iconic and impressive stadium. Moreover, the surrounding area of Barcelona adds to the overall value of the stadium, with its rich culture and history providing an immersive experience for visitors. In summary, Camp Nou Barcelona, Spain is a must-visit destination for football enthusiasts from around the world, and an economic staple for Barcelona, attracting millions of tourists every year, and boosting the local economy.</div>
                             </p>
                             <p>
-                                <div><strong>#1 - Wembley Stadium</strong></div>
+                              <div id="wembley-stadium"></div>
+                              <div class="title"><strong>#1 Wembley Stadium (London, England)</strong>
+                        
+                                  <button onclick="voteUp()">👍</button>
+                                  <button onclick="voteDown()">👎</button>
+                                </div>
                                 <div><img src="images/Wembley.jpg" alt="Wembley" title="Wembley" width="350px" height="200px"></div>
                                 <div>
-                                     ... 
+                                  Wembley Stadium in London, UK is considered the top destination for football enthusiasts from around the world, thanks to its rich history and exceptional games. The atmosphere at Wembley is unmatched, with passionate fans creating an electric and buzzing environment during matches. Its design guarantees an unobstructed view of the pitch, ensuring a remarkable viewing experience for all spectators. Wembley's architecture is a masterpiece that exemplifies the beauty and art of football stadiums, making it one of the most iconic and impressive stadiums in the world. Additionally, the surrounding area of London adds to the stadium's value, providing a rich cultural experience for visitors. In conclusion, Wembley Stadium is a must-visit destination for football lovers and an economic staple for London, attracting millions of tourists every year and contributing significantly to the local economy.
                                 </div>
                       </main>
         
                       <footer>
-        <br>
-                <div class="grid-container">
-                  <div class="grid-item"><strong><a href="index.html">Home</a></strong></div>
-                  <div class="grid-item"><strong><a href="Gallery.html">Gallery</a></strong></div>
-                  <div class="grid-item"><strong><a href="Stadium.html">Stadium Ranking</a></strong></div>  
-                  <div class="grid-item"><strong><a href="History.html"> History </a></strong></div>
-                  <div class="grid-item"><strong><a href="Geo-Map.html"> Geo Map </a></strong></div>
-                  <div class="grid-item"><strong><a href="Champions-League.html"> Champions League </a></strong></div>  
-                  <div class="grid-item"><strong>Contact</strong>
-                  <div><a href="contact.html">Link to Form</a></div>
-                </div>
-              </br>
-            </footer>
+                        <div class="grid-container">
+                          <div class="grid-item"><strong><a href="index.html">Home</a></strong></div>
+                          <div class="grid-item"><strong><a href="Gallery.html">Gallery</a></strong></div>
+                          <div class="grid-item"><strong><a href="Stadium.html">Stadium Ranking</a></strong></div>  
+                          <div class="grid-item"><strong><a href="History.html">History</a></strong></div>
+                          <div class="grid-item"><strong><a href="Champions-League.html">Champions League</a></strong></div>  
+                          <div class="grid-item"><strong><a href="contact.html">Contact</a></strong></div>
+                        </div>
+                      </footer>
+                      <script>
+function voteUp() {
+}
+
+function voteDown() {
+}
+var stadeLouisUpvotes = 0;
+var stadeLouisDownvotes = 0;
+
+var sukruUpvotes = 0;
+var sukruDownvotes = 0;
+
+var arenaNationalaUpvotes = 0;
+var arenaNationalaDownvotes = 0;
+
+var anfieldUpvotes = 0;
+var anfieldDownvotes = 0;
+
+var celticParkUpvotes = 0;
+var celticParkDownvotes = 0;
+
+var sanSiroUpvotes = 0;
+var sanSiroDownvotes = 0;
+
+var allianzUpvotes = 0;
+var allianzDownvotes = 0;
+
+var bernabeuUpvotes = 0;
+var bernabeuDownvotes = 0;
+
+var signalIdunaUpvotes = 0;
+var signalIdunaDownvotes = 0;
+
+var oldTraffordUpvotes = 0;
+var oldTraffordDownvotes = 0;
+
+var campNouUpvotes = 0;
+var campNouDownvotes = 0;
+
+var wembleyUpvotes = 0;
+var wembleyDownvotes = 0;
+
+function voteUpStadeLouis() {
+  stadeLouisUpvotes++;
+  console.log("Stade Louis II upvotes: " + stadeLouisUpvotes);
+}
+
+function voteDownStadeLouis() {
+  stadeLouisDownvotes++;
+  console.log("Stade Louis II downvotes: " + stadeLouisDownvotes);
+}
+
+function voteUpSukru() {
+  sukruUpvotes++;
+  console.log("Sukru Saracoglu upvotes: " + sukruUpvotes);
+}
+
+function voteDownSukru() {
+  sukruDownvotes++;
+  console.log("Sukru Saracoglu downvotes: " + sukruDownvotes);
+}
+
+function voteUpArenaNationala() {
+  arenaNationalaUpvotes++;
+  console.log("Arena Nationala upvotes: " + arenaNationalaUpvotes);
+}
+
+function voteDownArenaNationala() {
+  arenaNationalaDownvotes++;
+  console.log("Arena Nationala downvotes: " + arenaNationalaDownvotes);
+}
+
+function voteUpAnfield() {
+  anfieldUpvotes++;
+  console.log("Anfield upvotes: " + anfieldUpvotes);
+}
+
+function voteDownAnfield() {
+  anfieldDownvotes++;
+  console.log("Anfield downvotes: " + anfieldDownvotes);
+}
+
+function voteUpCelticPark() {
+  celticParkUpvotes++;
+  console.log("Celtic Park upvotes: " + celticParkUpvotes);
+}
+
+function voteDownCelticPark() {
+  celticParkDownvotes++;
+  console.log("Celtic Park downvotes: " + celticParkDownvotes);
+}
+
+function voteUpSanSiro() {
+  sanSiroUpvotes++;
+  console.log("San Siro upvotes: " + sanSiroUpvotes);
+}
+
+function voteDownSanSiro() {
+  sanSiroDownvotes++;
+  console.log("San Siro downvotes: " + sanSiroDownvotes);
+}
+
+function voteUpAllianz() {
+  allianzUpvotes++;
+  console.log("Allianz Arena upvotes: " + allianzUpvotes);
+}
+
+function voteDownAllianz() {
+  allianzDownvotes++;
+  console.log("Allianz Arena downvotes: " + allianzDownvotes);
+}
+
+function voteUpBernabeu() {
+  bernabeuUpvotes++;
+  console.log("Santiago Bernabeu upvotes: " + bernabeuUpvotes);
+}
+function voteDownBernabeu() {
+  bernabeuDownvotes++;
+  console.log("Santiago Bernabeu downvotes: " + bernabeuDownvotes);
+}
+
+function voteUpPark() {
+  parkupvotes++;
+  console.log("Signal Iduna Park upvotes: " + parkUpvotes);
+}
+function voteDownPark() {
+  parkDownvotes++;
+  console.log("Signal Iduna Park downvotes: " + parkDownvotes);
+}
+
+function voteUpTrafford() {
+  traffordupvotes++;
+  console.log("Old Trafford upvotes: " + traffordUpvotes);
+}
+function voteDownTrafford() {
+  traffordDownvotes++;
+  console.log("Old Trafford downvotes: " + traffordDownvotes);
+}
+
+function voteUpNou() {
+  nouupvotes++;
+  console.log("Camp Nou upvotes: " + nouUpvotes);
+}
+function voteDownNou() {
+  nouDownvotes++;
+  console.log("Camp Nou downvotes: " + nouDownvotes);
+}
+
+function voteUpWembley() {
+  wembleyupvotes++;
+  console.log("Wembley upvotes: " + wembleyUpvotes);
+}
+function voteDownWembley() {
+  wembleyDownvotes++;
+  console.log("Wembley downvotes: " + wembleyDownvotes);
+}
+document.getElementById("stadeLouisUpvoteBtn").addEventListener("click", voteUpStadeLouis);
+document.getElementById("stadeLouisDownvoteBtn").addEventListener("click", voteDownStadeLouis);
+document.getElementById("sukruUpvoteBtn").addEventListener("click", voteUpSukru);
+document.getElementById("sukruDownvoteBtn").addEventListener("click", voteDownSukru);
+document.getElementById("arenaNationalaUpvoteBtn").addEventListener("click", voteUpArenaNationala);
+document.getElementById("arenaNationalaDownvoteBtn").addEventListener("click", voteDownArenaNationala);
+document.getElementById("anfieldUpvoteBtn").addEventListener("click", voteUpAnfield);
+document.getElementById("anfieldDownvoteBtn").addEventListener("click", voteDownAnfield);
+document.getElementById("celticParkUpvoteBtn").addEventListener("click", voteUpCelticPark);
+document.getElementById("celticParkDownvoteBtn").addEventListener("click", voteDownCelticPark);
+document.getElementById("sanSiroUpvoteBtn").addEventListener("click", voteUpSanSiro);
+document.getElementById("sanSiroDownvoteBtn").addEventListener("click", voteDownSanSiro);
+document.getElementById("allianzUpvoteBtn").addEventListener("click", voteUpAllianz);
+document.getElementById("allianzDownvoteBtn").addEventListener("click", voteDownAllianz);
+document.getElementById("bernabeuUpvoteBtn").addEventListener("click", voteUpBernabeu);
+document.getElementById("bernabeuDownvoteBtn").addEventListener("click", voteDownBernabeu);
+document.getElementById("signalIdunaUpvoteBtn").addEventListener("click", voteUpPark);
+document.getElementById("signalIdunaDownvoteBtn").addEventListener("click", voteDownPark);
+document.getElementById("oldTraffordUpvoteBtn").addEventListener("click", voteUpTrafford);
+document.getElementById("oldTraffordDownvoteBtn").addEventListener("click", voteDownTrafford);
+document.getElementById("nouUpvoteBtn").addEventListener("click", voteUpNou);
+document.getElementById("nouDownvoteBtn").addEventListener("click", voteDownNou);
+document.getElementById("wembleyUpvoteBtn").addEventListener("click", voteUpWembley);
+document.getElementById("wembleyDownvoteBtn").addEventListener("click", voteDownWembley);
+
+     </script>
         </body>
         </html>

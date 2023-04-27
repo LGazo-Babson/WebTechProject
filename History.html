@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stadium History</title>
     <style>
-      
-      body{
-  background-color: #b0dcf6;
-}
+ body {
+      background-image: linear-gradient(to right, rgb(219, 242, 248), rgb(54, 200, 248));
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
       .navbar {
   overflow: hidden;
-  background-color: #4b6575;
+  background-color: rgb(104, 214, 251);
 }
 
 .navbar a {
@@ -25,36 +28,12 @@
   text-decoration: none;
 }
 
-.stad {
-  float: left;
-  overflow: hidden;
+
+.navbar a:hover {
+  background-color: rgb(170, 218, 233);
 }
 
-.stad .dropbtn{
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .stad:hover .dropbtn {
-  background-color: rgb(131, 185, 203);
-}
-
-.stad-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.stad-content a {
+a {
   float: none;
   color: black;
   padding: 12px 16px;
@@ -63,55 +42,62 @@
   text-align: left;
 }
 
-.stad-content a:hover {
-  background-color: #ddd;
+article {
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: auto;
+  text-align: center;
+  width: 100%;
 }
 
-.stad:hover .stad-content {
-  display: block;
-}
-        article {
-            min-height: 100vh;
-            display: grid;
-            grid-template-rows: auto 1fr auto;
-            grid-template-columns: 100vw;
-        }
-        
-        h1{
-          text-align: center;
-          margin-left: auto;
-        margin-right: auto;}
+h1 {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      color: rgb(69, 74, 79);
+      font-size: 30px;
+    }
 
-        .intro{
-            text-align: center;
-        }
-        
-        .grid-container {
-          display: grid;
-          grid-template-columns: repeat(7, auto);
-          background-color:#b0dcf6;
-          padding: 10px;
-          justify-self: start;
-        align-self: end;}
-        .grid-item {
-          background-color: #b0dcf6;
-          border: none;
-          padding: 20px;
-          font-size: 15px;
-          color: black;
-          justify-self:start;
-          align-self: start;
-        }
-        a{text-decoration: none;
-        color: black;}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  background-color: rgb(104, 214, 251);
+  padding: 10px;
+  justify-self: start;
+  align-self: end;
+}
+.grid-item {
+  background-color: rgb(104, 214, 251);
+  border: none;
+  padding: 20px;
+  font-size: 15px;
+  color: white;
+  justify-self: start;
+  align-self: start;
+}
+.grid-item:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
         img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 .title{
-  text-align: center;
+  text-align: left;
   font-size: 25px;
+}
+main {
+  color: rgb(69, 74, 79);
 }
         </style>
             <link rel="icon" href="images/favicon.ico" type="image/ico" />
@@ -120,20 +106,10 @@
           <div class="navbar">
             <a href="index.html">Home</a>
             <a href="gallery.html">Gallery</a>
-            <div class="stad">
-              <button class="dropbtn"><a href= "Stadium.html">Stadum Ranking</a></button>
-              <div class="stad-content">
-                <a href="Stadium1">1</a>
-                <a href="Stadium2">2</a>
-                <a href="Stadium3">3</a>
-                <a href="Stadium4">4</a>
-                </div>
-                </div>
+            <a href= "Stadium.html">Stadium Ranking</a>
             <a href="History.html"> History </a>
-            <a href="Geo-Map.html"> Geo Map </a>
             <a href="Champions-League.html"> Champions League </a>
             <a href="sitemap.html">Site Map</a>
-              </div>
               </div>
         
                   <article>
@@ -146,6 +122,7 @@
                         Understanding the history of a soccer stadium is crucial to fully immersing oneself in the experience of being a fan. A stadium's past tells the story of the team, its culture, and its connection with the local community. From legendary moments to tragic losses, the stadium has witnessed it all. Moreover, it serves as a source of pride for the fans and a symbol of the team's identity. By learning about the stadium's history, fans can appreciate the traditions and heritage of their club and feel a sense of connection to the past, present, and future of their team. Therefore, it is essential to delve into the history of a soccer stadium to fully enjoy and appreciate the game.
                     </p>
                     <p>
+                      <div id="stade-louis-ii"></div>
                         <div class="title"><strong>Stade Louis II (Monaco)</strong></div>
                         <div><img src="images/StadeLouis.jpg" alt="StadeLouisII" title="StadeLouisII" width="350px" height="200px"></div>
                         <div>
@@ -156,6 +133,7 @@
                         </div>
                     </p>
                     <p>
+                      <div id="sukru-saracoglu-stadium"></div>
                       <div class="title"><strong>Sukru Saracoglu Stadium (Istanbul, Turkey)</strong></div>
                         <div><img src="images/Sukru.jpg" alt="Sukru" title="Sukru" width="350px" height="200px"></div>
                         <div>
@@ -169,6 +147,7 @@ In addition to football matches, the Sukru Saracoglu Stadium has also hosted num
                         </div>
                     </p>
                     <p>
+                      <div id="arena-nationala"></div>
                       <div class="title"><strong>Arena Nationala (Bucharest, Romania)</strong></div>
                         <div><img src="images/arenanationala.jpg" alt="Arena Nationala" title="Arena Nationala" width="350px" height="200px"></div>
                         <div>
@@ -182,6 +161,7 @@ In addition to football matches, the Sukru Saracoglu Stadium has also hosted num
                         </div>
                     </p>
                     <p>
+                      <div id="anfield-stadium"></div>
                       <div class="title"><strong>Anfield Stadium (Liverpool, England)</strong></div>
                         <div><img src="images/Anfield.jpg" alt="Anfield" title="Anfield" width="350px" height="200px"></div>
                         <div>
@@ -195,6 +175,7 @@ In addition to football matches, the Sukru Saracoglu Stadium has also hosted num
                         </div>
                     </p>
                     <p>
+                      <div id="celtic-park"></div>
                       <div class="title"><strong>Celtic Park (Glasgow, Scotland)</strong></div>
                         <div><img src="images/CelticPark.jpg" alt="Celtic Park" title="Celtic Park" width="350px" height="200px"></div>
                         <div>
@@ -208,6 +189,7 @@ In addition to football matches, the Sukru Saracoglu Stadium has also hosted num
                         </div>
                     </p>
                     <p>
+                      <div id="san-siro"></div>
                       <div class="title"><strong>San Siro (Miland, Italy)</strong></div>
                         <div><img src="images/SanSiro.jpg" alt="San Siro" title="San Siro" width="350px" height="200px"></div>
                         <div>
@@ -221,6 +203,7 @@ In addition to football matches, the Sukru Saracoglu Stadium has also hosted num
                         </div>
                     </p>
                     <p>
+                      <div id="allianz-stadium"></div>
                       <div class="title"><strong>Allianz Arena (Munich, Germany)</strong></div>
                         <div><img src="images/Allianz.jpg" alt="Allianz Arena" title="Allianz Arena" width="350px" height="200px"></div>
                         <div>
@@ -234,6 +217,7 @@ The Allianz Arena has hosted several important football matches, including the 2
                         </div>
                     </p>
                     <p>
+                      <div id="santiago-bernabeu"></div>
                       <div class="title"><strong>Santiago Bernabeu (Madrid,Spain)</strong></div>
                         <div><img src="images/SantiBern.png" alt="SantiBernbeu" title="SantiagoBernbeu" width="350px" height="200px"></div>
                         <div>
@@ -246,6 +230,7 @@ In addition to hosting football matches and concerts, the Santiago Bernabeu Stad
                         </div>
                     </p>
                     <p>
+                      <div id="signal-iduna-park"></div>
                       <div class="title"><strong>Signal Iduna Park (Dortmund, Germnay)</strong></div>
                         <div><img src="images/BVB.jpg" alt="Signal Iduna Park" title="Signal Iduna Park" width="350px" height="200px"></div>
                         <div>
@@ -259,6 +244,7 @@ In addition to hosting football matches and concerts, the Santiago Bernabeu Stad
                         </div>
                     </p>
                     <p>
+                      <div id="old-trafford"></div>
                       <div class="title"><strong>Old Trafford (Manchester, England)</strong></div>
                         <div><img src="images/OldTrafford.jpg" alt="Old Trafford" title="Old Trafford" width="350px" height="200px"></div>
                         <div>
@@ -272,6 +258,7 @@ In addition to hosting football matches and concerts, the Santiago Bernabeu Stad
                         </div>
                         </p>
                         <p>
+                          <div id="camp-nou"></div>
                           <div class="title"><strong>Camp Nou (Barcelona, Spain)</strong></div>
                             <div><img src="images/CampNou.jpg" alt="Camp Nou" title="Camp Nou" width="350px" height="200px"></div>
                             <div>
@@ -285,6 +272,7 @@ In addition to hosting football matches and concerts, the Santiago Bernabeu Stad
                             </div>
                             </p>
                             <p>
+                              <div id="wembley-stadium"></div>
                               <div class="title"><strong>Wembley Stadium (London, England)</strong></div>
                                 <div><img src="images/Wembley.jpg" alt="Wembley" title="Wembley" width="350px" height="200px"></div>
                                 <div>
@@ -300,18 +288,14 @@ Overall, Wembley Stadium is a beloved landmark that has played a major role in B
                       </main>
         
                       <footer>
-        <br>
-                <div class="grid-container">
-                  <div class="grid-item"><strong><a href="index.html">Home</a></strong></div>
-                  <div class="grid-item"><strong><a href="Gallery.html">Gallery</a></strong></div>
-                  <div class="grid-item"><strong><a href="Stadium.html">Stadium Ranking</a></strong></div>  
-                  <div class="grid-item"><strong><a href="History.html"> History </a></strong></div>
-                  <div class="grid-item"><strong><a href="Geo-Map.html"> Geo Map </a></strong></div>
-                  <div class="grid-item"><strong><a href="Champions-League.html"> Champions League </a></strong></div>  
-                  <div class="grid-item"><strong>Contact</strong>
-                  <div><a href="contact.html">Link to Form</a></div>
-                </div>
-            </br>
-            </footer>
+                        <div class="grid-container">
+                          <div class="grid-item"><strong><a href="index.html">Home</a></strong></div>
+                          <div class="grid-item"><strong><a href="Gallery.html">Gallery</a></strong></div>
+                          <div class="grid-item"><strong><a href="Stadium.html">Stadium Ranking</a></strong></div>  
+                          <div class="grid-item"><strong><a href="History.html">History</a></strong></div>
+                          <div class="grid-item"><strong><a href="Champions-League.html">Champions League</a></strong></div>  
+                          <div class="grid-item"><strong><a href="contact.html">Contact</a></strong></div>
+                        </div>
+                      </footer>
         </body>
         </html>

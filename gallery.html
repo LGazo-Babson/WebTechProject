@@ -1,296 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Gallery</title>
-<style>
-body{
-  background-color: #b0dcf6;
-}
+    <style>
+    body {
+      background-image: linear-gradient(to right, rgb(219, 242, 248), rgb(54, 200, 248));
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
       .navbar {
-  overflow: hidden;
-  background-color: #4b6575;
-}
-
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.stad {
-  float: left;
-  overflow: hidden;
-}
-
-.stad .dropbtn{
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .stad:hover .dropbtn {
-  background-color: rgb(131, 185, 203);
-}
-
-.stad-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.stad-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.stad-content a:hover {
-  background-color: #ddd;
-}
-
-.stad:hover .stad-content {
-  display: block;
-}
-  
-  article {
-      min-height: 100vh;
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      grid-template-columns: 100vw;
+    overflow: hidden;
+    background-color: rgb(104, 214, 251);
   }
-  
-  h1{
-    text-align: center;
-    margin-left: auto;
-  margin-right: auto;}
-  
-  .grid-container {
-  display: grid;
-  grid-template-columns: repeat(7, auto);
-  background-color:#b0dcf6;
-  padding: 10px;
-  justify-self: start;
-align-self: end;}
-.grid-item {
-  background-color: #b0dcf6;
-  border: none;
-  padding: 20px;
-  font-size: 15px;
-  color: black;
-  justify-self:start;
-  align-self: start;
+
+  .navbar a {
+float: left;
+font-size: 16px;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
 }
-  a{text-decoration: none;
-  color: black;}
-  
+
+.navbar a:hover {
+background-color: rgb(170, 218, 233);
+}
+
+a {
+float: none;
+color: white;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+article {
+min-height: 100vh;
+display: grid;
+grid-template-rows: auto 1fr auto;
+grid-template-columns: auto;
+}
+
+h1 {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      color: rgb(69, 74, 79);
+      font-size: 30px;
+    }
+
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(24, 6vw);
-  gap: 1px;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: larger;
-  text-align: center;
-  font-weight: bold;
+position: relative;
+margin: 0 auto;
+width: 70%;
+height: 70vh;
+border: 2px solid black;
+overflow: hidden;
 }
 
 .gallery__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block; 
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
 
-.gallery__item--1 {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 5;
+.prevNext {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -22px;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+border-radius: 0 3px 3px 0;
+user-select: none;
+background-color: rgba(0,0,0,0.5);
 }
 
-.gallery__item--2 {
-  grid-column-start: 5;
-  grid-column-end: 9;
-  grid-row-start: 1;
-  grid-row-end: 5;
-
+.prev {
+left: 0;
 }
 
-.gallery__item--3 {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 5;
-  grid-row-end: 9;
+.next {
+right: 0;
 }
 
-.gallery__item--4 {
-  grid-column-start: 5;
-  grid-column-end: 9;
-  grid-row-start: 5;
-  grid-row-end: 9;
-
+.prevNext:hover {
+background-color: rgba(0,0,0,0.8);
 }
 
-.gallery__item--5 {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 9;
-  grid-row-end: 13;
-
+.caption-container {
+text-align: center;
+background-color: rgba(0,0,0,0.5);
+padding: 2px 16px;
+color: white;
+position: absolute;
+bottom: 0;
+width: 100%;
 }
 
-.gallery__item--6 {
-  grid-column-start: 5;
-  grid-column-end: 9;
-  grid-row-start: 9;
-  grid-row-end: 13;
+.caption-container h2 {
+margin: 0;
+font-size: 24px;
 }
 
-.gallery__item--7 {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 13;
-  grid-row-end: 17;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  background-color: rgb(104, 214, 251);
+  padding: 10px;
+  justify-self: start;
+  align-self: end;
 }
-
-.gallery__item--8 {
-  grid-column-start: 5;
-  grid-column-end: 9;
-  grid-row-start: 13;
-  grid-row-end: 17;
+.grid-item {
+  background-color: rgb(104, 214, 251);
+  border: none;
+  padding: 20px;
+  font-size: 15px;
+  color: white;
+  justify-self: start;
+  align-self: start;
 }
-
-.gallery__item--9 {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 17;
-  grid-row-end: 21;
+.grid-item:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.gallery__item--10 {
-  grid-column-start: 5;
-  grid-column-end: 9;
-  grid-row-start: 17;
-  grid-row-end: 21;
+a {
+  text-decoration: none;
+  color: white;
 }
-
-.gallery__item--11 {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 21;
-  grid-row-end: 25;
-}
-
-.gallery__item--12 {
-  grid-column-start: 5;
-  grid-column-end: 9;
-  grid-row-start: 21;
-  grid-row-end: 25;
-}
-  </style>
-      <link rel="icon" href="images/favicon.ico" type="image/ico" />
+    </style>
+    <link rel="icon" href="images/favicon.ico" type="image/ico" />
   </head>
   <body>
     <div class="navbar">
       <a href="index.html">Home</a>
       <a href="gallery.html">Gallery</a>
-      <div class="stad">
-        <button class="dropbtn"><a href= "Stadium.html">Stadum Ranking</a></button>
-        <div class="stad-content">
-          <a href="Stadium1">1</a>
-          <a href="Stadium2">2</a>
-          <a href="Stadium3">3</a>
-          <a href="Stadium4">4</a>
-          </div>
-          </div>
-      <a href="History.html"> History </a>
-      <a href="Geo-Map.html"> Geo Map </a>
-      <a href="Champions-League.html"> Champions League </a>
+      <a href="Stadium.html">Stadium Ranking</a>
+      <a href="History.html">History</a>
+      <a href="Champions-League.html">Champions League</a>
       <a href="sitemap.html">Site Map</a>
-        </div>
-        </div>
-  
-            <article>
-              <header>
-            <h1>Gallery</h1>
-            </header>
-  
-            <main>
-              <p>
-                <div class="gallery">
-                    <figure class="gallery__item--1">
-                        <img src="images/Anfield.jpg" alt="Anfield" class="gallery__img"> Anfield Stadium - Liverpool, England
-                    </figure>
-                    <figure class="gallery__item--2">
-                        <img src="images/BVB.jpg" alt="BVB" class="gallery__img"> Signal Iduna Park - Dortmund, Germany
-                    </figure>
-                    <figure class="gallery__item--3">
-                        <img src="images/CampNou.jpg" alt="Camp Nou" class="gallery__img"> Camp Nou - Barcelona, Spain
-                    </figure>
-                    <figure class="gallery__item--4">
-                        <img src="images/CelticPark.jpg" alt="Celtic Park" class="gallery__img"> Celtic Park - Glasgow, Scotland
-                    </figure>
-                    <figure class="gallery__item--5">
-                        <img src="images/SanSiro.jpg" alt="San Siro" class="gallery__img"> San Siro - Milan, Italy
-                    </figure>
-                    <figure class="gallery__item--6">
-                        <img src="images/OldTrafford.jpg" alt="Old Trafford" class="gallery__img"> Old Trafford - Manchester, England
-                    </figure>
-                    <figure class="gallery__item--7">
-                        <img src="images/SantiBern.png" alt="Santiago Bernabeu" class="gallery__img"> Santiago Bernabeu - Madrid, Spain
-                    </figure>
-                        <figure class="gallery__item--8">
-                            <img src="images/Sukru.jpg" alt="Sukru" class="gallery__img"> Sukru Saracoglu Stadium - Istanbul, Turkey
-                        </figure>
-                        <figure class="gallery__item--9">
-                            <img src="images/Wembley.jpg" alt="Wembley" class="gallery__img"> Wembley Stadium - London, England
-                        </figure>
-                        <figure class="gallery__item--10">
-                            <img src="images/Allianz.jpg" alt="Allianz" class="gallery__img"> Allianz Arena - Munich, Germany 
-                        </figure>
-                        <figure class="gallery__item--11">
-                            <img src="images/StadeLouis.jpg" alt="StadeLouis" class="gallery__img"> Stade Louis II - Monaco 
-                        </figure>
-                        <figure class="gallery__item--12">
-                            <img src="images/arenanationala.jpg" alt="Arena Nationala" class="gallery__img"> Arena Nationala - Bucharest, Romania
-                    </figure>
-                </div>
-                </p>
-                </main>
-  
-                <footer>
-  <br>
-  <footer>
-    <br>
-            <div class="grid-container">
-              <div class="grid-item"><strong><a href="index.html">Home</a></strong></div>
-              <div class="grid-item"><strong><a href="Gallery.html">Gallery</a></strong></div>
-              <div class="grid-item"><strong><a href="Stadium.html">Stadium Ranking</a></strong></div>  
-              <div class="grid-item"><strong><a href="History.html"> History </a></strong></div>
-              <div class="grid-item"><strong><a href="Geo-Map.html"> Geo Map </a></strong></div>
-              <div class="grid-item"><strong><a href="Champions-League.html"> Champions League </a></strong></div>  
-              <div class="grid-item"><strong>Contact</strong>
-              <div><a href="contact.html">Link to Form</a></div>
+    </div>
+    <article>
+      <header>
+        <h1>Gallery</h1>
+      </header>
+      <main>
+        <div class="gallery">
+          <div class="slideshow-container">
+            <div class="mySlides">
+              <img src="images/Anfield.jpg" alt="Anfield" style="width:100%">
+              <div class="caption-container">
+                <h2 class="caption">Anfield</h2>
+              </div>
             </div>
-          </br>
-      </footer>
+            <div class="mySlides">
+              <img src="images/CampNou.jpg" alt="Camp Nou" style="width:100%">
+              <div class="caption-container">
+                <h2 class="caption">Camp Nou</h2>
+              </div>
+            </div>
+            <div class="mySlides">
+              <img src="images/CelticPark.jpg" alt="Celtic Park" style="width:100%">
+              <div class="caption-container">
+                <h2 class="caption">Celtic Park</h2>
+              </div>
+            </div>
+            <div class="mySlides">
+              <img src="images/SanSiro.jpg" alt="San Siro" style="width:100%">
+              <div class="caption-container">
+                <h2 class="caption">San Siro</h2>
+              </div>
+            </div>
+            <div class="mySlides">
+              <img src="images/OldTrafford.jpg" alt="Old Trafford" style="width:100%">
+              <div class="caption-container">
+                <h2 class="caption">Old Trafford</h2>
+              </div>
+            </div>
+            <div class="mySlides">
+              <img src="images/SantiBern.png" alt="Santiago Bernabeu" style="width:100%">
+              <div class="caption-container">
+                <h2 class="caption">Santiago Bernabeu</h2>
+              </div>
+            </div>
+            <div class="mySlides">
+              <img src="images/Sukru.jpg" alt="Sukru" style="width:100%">
+              <div class="caption-container">
+                <h2 class="caption">Sukru Park</h2>
+              </div>
+            </div>
+            <div class="mySlides">
+              <img src="images/Wembley.jpg" alt="Wembley" style="width:100%">
+              <div class="caption-container">
+                <h2 class="caption">Wembley Stadium</h2>
+              </div>
+            </div>
+            <div class="mySlides">
+              <img src="images/Allianz.jpg" alt="Allianz" style="width:100%">
+              <div class="caption-container">
+                <h2 class="caption">Allianz Arena</h2>
+              </div>
+            </div>
+            <div class="mySlides">
+              <img src="images/StadeLouis.jpg" alt="StadeLouis" style="width:100%">
+              <div class="caption-container">
+                <h2 class="caption">Stade Louis</h2>
+              </div>
+            </div>
+            <div class="mySlides">
+              <img src="images/arenanationala.jpg" alt="Arena Nationala" style="width:100%">
+              <div class="caption-container">
+                <h2 class="caption">Arena Nationala</h2>
+              </div>
+            </div>
+            <button class="prevNext prev" onclick="plusSlides(-1)">❮ Prev</button>
+            <button class="prevNext next" onclick="plusSlides(1)">Next ❯</button>
+          </div>
+        </div>
+      </main>
+    </article>
+    <footer>
+      <div class="grid-container">
+        <div class="grid-item"><strong><a href="index.html">Home</a></strong></div>
+        <div class="grid-item"><strong><a href="Gallery.html">Gallery</a></strong></div>
+        <div class="grid-item"><strong><a href="Stadium.html">Stadium Ranking</a></strong></div>  
+        <div class="grid-item"><strong><a href="History.html">History</a></strong></div>
+        <div class="grid-item"><strong><a href="Champions-League.html">Champions League</a></strong></div>  
+        <div class="grid-item"><strong><a href="contact.html">Contact</a></strong></div>
+      </div>
+    </footer>
+      <script>
+       var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+    var captionText = slides[slideIndex - 1].getElementsByClassName("caption-container")[0].getElementsByTagName("h2")[0].textContent;
+    document.querySelector(".caption-container h2").textContent = captionText;
+  }
+</script>
   </body>
 </html>

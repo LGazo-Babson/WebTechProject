@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SiteMap</title>
     <style>
-      
-body{
-  background-color: #b0dcf6;
-}
+body {
+      background-image: linear-gradient(to right, rgb(219, 242, 248), rgb(54, 200, 248));
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
       .navbar {
   overflow: hidden;
-  background-color: #4b6575;
+  background-color: rgb(104, 214, 251);
 }
 
 .navbar a {
@@ -25,36 +28,12 @@ body{
   text-decoration: none;
 }
 
-.stad {
-  float: left;
-  overflow: hidden;
+
+.navbar a:hover {
+  background-color: rgb(170, 218, 233);
 }
 
-.stad .dropbtn{
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .stad:hover .dropbtn {
-  background-color: rgb(131, 185, 203);
-}
-
-.stad-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.stad-content a {
+a {
   float: none;
   color: black;
   padding: 12px 16px;
@@ -63,43 +42,45 @@ body{
   text-align: left;
 }
 
-.stad-content a:hover {
-  background-color: #ddd;
-}
-
-.stad:hover .stad-content {
-  display: block;
-}
 article {
 	min-height: 100vh;
 	display: grid;
 	grid-template-rows: auto 1fr auto;
-	grid-template-columns: 100vw;
+	grid-template-columns: auto;
+  text-align: center;
+  width: 100%;
 }
 
-h1{
-  text-align: center;
-  margin-left: auto;
-margin-right: auto;}
+h1 {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      color: rgb(69, 74, 79);
+      font-size: 30px;
+    }
 
 .grid-container {
   display: grid;
   grid-template-columns: repeat(7, auto);
-  background-color:#b0dcf6;
+  background-color:rgb(104, 214, 251);
   padding: 10px;
   justify-self: start;
 align-self: end;}
 .grid-item {
-  background-color: #b0dcf6;
+  background-color: rgb(104, 214, 251);
   border: none;
   padding: 20px;
   font-size: 15px;
-  color: black;
+  color: white;
   justify-self:start;
   align-self: start;
 }
+.grid-item a {
+  padding: 5px 16px;
+}
+
 a{text-decoration: none;
-color: black;}
+color: white;}
     </style>
     <link rel="icon" href="images/favicon.ico" type="image/ico" />
 </head>
@@ -108,24 +89,14 @@ color: black;}
   <div class="navbar">
     <a href="index.html">Home</a>
     <a href="gallery.html">Gallery</a>
-    <div class="stad">
-      <button class="dropbtn"><a href= "Stadium.html">Stadum Ranking</a></button>
-      <div class="stad-content">
-        <a href="Stadium1">1</a>
-        <a href="Stadium2">2</a>
-        <a href="Stadium3">3</a>
-        <a href="Stadium4">4</a>
-        </div>
-        </div>
+    <a href= "Stadium.html">Stadium Ranking</a>
     <a href="History.html"> History </a>
-    <a href="Geo-Map.html"> Geo Map </a>
     <a href="Champions-League.html"> Champions League </a>
     <a href="sitemap.html">Site Map</a>
       </div>
-      </div>
           <article>
             <header>
-          <h1>Futbol Stadiums Site Map</h1>
+          <h1>Football Stadiums Site Map</h1>
           </header>
           <main>
 
@@ -145,26 +116,42 @@ color: black;}
         <div><a href="images/Sukru.jpg">Sukru Saracoglu Stadium</a></div>
         <div><a href="images/Wembley.jpg">Wembley Stadium</a></div>
 </div>
-        <div class="grid-item"><strong><a href="StadiumRanking.html">Stadium Ranking</a></strong>
-          <div>StadiumLink</div>
-          <div>StadiumLink</div>
-        <div>StadiumLink</div>
-      <div>StadiumLink</div>
-    </div>  
-        <div class="grid-item"><strong><a href="History.html"> History </a></strong>
-          <div>History Home</div>
-          <div>StadiumLink</div>
-        <div>StadiumLink</div>
-      <div>StadiumLink</div></div>
-        <div class="grid-item"><strong><a href="Geo-Map.html"> Geo Map </a></strong>
-          <div><a href= "images/SCREENSHOTOFMAP"></a></div>
-        </div>
-
+        <div class="grid-item"><strong><a href="Stadium.html">Stadium Ranking</a></strong>
+          <div><a href="Stadium.html#stade-louis-ii">Stade Louis II</a></div>
+      <div><a href="Stadium.html#sukru-saracoglu-stadium">Sukru Saracoglu Stadium</a></div>
+      <div><a href="Stadium.html#arena-nationala">Arena Nationala</a></div>
+      <div><a href="Stadium.html#anfield-stadium">Anfield Stadium</a></div>
+      <div><a href="Stadium.html#celtic-park">Celtic Park</a></div>
+      <div><a href="Stadium.html#san-siro">San Siro</a></div>
+      <div><a href="Stadium.html#allianz-stadium">Allianz Stadium</a></div>
+      <div><a href="Stadium.html#santiago-bernabeu">Santiago Bernabeu</a></div>
+      <div><a href="Stadium.html#signal-iduna-park">Signal Iduna Park</a></div>
+      <div><a href="Stadium.html#old-trafford">Old Trafford</a></div>
+      <div><a href="Stadium.html#camp-nou">Camp Nou</a></div>
+      <div><a href="Stadium.html#wembley-stadium">Wembley Stadium</a></div>
+    </div>
+    <div class="grid-item">
+      <strong><a href="History.html"> History </a></strong>
+      <div><a href="History.html#stade-louis-ii">Stade Louis II</a></div>
+      <div><a href="History.html#sukru-saracoglu-stadium">Sukru Saracoglu Stadium</a></div>
+      <div><a href="History.html#arena-nationala">Arena Nationala</a></div>
+      <div><a href="History.html#anfield-stadium">Anfield Stadium</a></div>
+      <div><a href="History.html#celtic-park">Celtic Park</a></div>
+      <div><a href="History.html#san-siro">San Siro</a></div>
+      <div><a href="History.html#allianz-stadium">Allianz Stadium</a></div>
+      <div><a href="History.html#santiago-bernabeu">Santiago Bernabeu</a></div>
+      <div><a href="History.html#signal-iduna-park">Signal Iduna Park</a></div>
+      <div><a href="History.html#old-trafford">Old Trafford</a></div>
+      <div><a href="History.html#camp-nou">Camp Nou</a></div>
+      <div><a href="History.html#wembley-stadium">Wembley Stadium</a></div>
+    </div>
+    
         <div class="grid-item"><strong><a href="Champions-League.html"> Champions League </a></strong></div>  
         <div class="grid-item"><strong>Contact</strong>
-          <div>Email</div>
-          <div>xxx-xxx-xxxx</div>
-        <div><a href="contact.html">Fill Out Form</a></div>
+          <div>LGazo1@babson.edu</div>
+          <div>1-800-Tourist</div>
+          <div><a href="contact.html">Fill Out Form</a></div>
+        </div>
       </div>
       </div>
       </main>

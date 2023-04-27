@@ -1,211 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project1</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Stadiums HomePage</title>
     <style>
-body{
-  background-color: #b0dcf6;
-}
+body {
+      background-image: linear-gradient(to right, rgb(219, 242, 248), rgb(54, 200, 248));
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-      .navbar {
-  overflow: hidden;
-  background-color: #4b6575;
-}
+    .navbar {
+      overflow: hidden;
+      background-color: rgb(104, 214, 251);
+    }
 
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: rgb(170, 218, 233);
+    }
+
+    a {
+      float: none;
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    article {
+      flex: 1;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      grid-template-columns: 100vw;
+    }
+
+    h1 {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      color: rgb(69, 74, 79);
+      font-size: 50px;
+    }
+
+    .slide {
+      width: 600px;
+      height: 300px;
+      position: relative;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      overflow: hidden;
+      border: 1px solid #ffffff;
+      border-radius: 2px;
+      box-shadow: -1px 5px 15px black;
+    }
+
+    .show {
+      width: 100%;
+      display: flex;
+      animation: slide 16s infinite;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    footer {
+      background-color: rgb(104, 214, 251);
+      overflow: hidden;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(7, auto);
+      padding: 10px;
+      justify-items: center;
+    }
+
+    .grid-item {
+      background-color: rgb(104, 214, 251);
+      border: none;
+      padding: 20px;
+      font-size: 15px;
+      color: white;
+    }
+
+    .About-us {
+      font-size: 16px;
+  color: rgb(69, 74, 79);
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  margin: 0 auto;
+  width: 80%;
 }
 
-.stad {
-  float: left;
-  overflow: hidden;
-}
-
-.stad .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .stad:hover .dropbtn {
-  background-color: rgb(131, 185, 203);
-}
-
-.stad-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.stad-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.stad-content a:hover {
-  background-color: #ddd;
-}
-
-.stad:hover .stad-content {
-  display: block;
-}
-
-
-article {
-	min-height: 100vh;
-	display: grid;
-	grid-template-rows: auto 1fr auto;
-	grid-template-columns: 100vw;
-}
-
-h1{
-  text-align: center;
-  margin-left: auto;
-margin-right: auto;}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(7, auto);
-  background-color:#b0dcf6;
-  padding: 10px;
-  justify-self: start;
-align-self: end;}
-.grid-item {
-  background-color: #b0dcf6;
-  border: none;
-  padding: 20px;
-  font-size: 15px;
-  color: black;
-  justify-self:start;
-  align-self: start;
-}
-a{text-decoration: none;
-color: black;}
-
-.slide{
-    width: 800px;
-    height: 400px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    overflow: hidden;
-    border: 1px solid #ffffff;
-    border-radius: 2px;
-    box-shadow: -1px 5px 15px black;
-}
-
-.show{
+@media only screen and (max-width: 800px) {
+  .slide {
     width: 100%;
-    display: flex;
-    animation: slide 16s infinite;
+    height: auto;
+  }
 }
 
-img{
-    width: 100%;
-    height: 100%;
-}
-@keyframes slide{
-    0%{
+    
+    @keyframes slide {
+      0% {
         transform: translateX(0);
-    }
-    25%{
+      }
+      25% {
         transform: translateX(0);
-    }
-    30%{
+      }
+      30% {
         transform: translateX(-100%);
-    }
-    50%{
+      }
+      50% {
         transform: translateX(-100%);
-    }
-    55%{
+      }
+      55% {
         transform: translateX(-200%);
-    }
-    75%{
+      }
+      75% {
         transform: translateX(-200%);
-    }
-    80%{
+      }
+      80% {
         transform: translateX(-300%);
-    }
-    100%{
+      }
+      100% {
         transform: translateX(-300%);
+      }
     }
-}
 
-</style>
-    <link rel="icon" href="images/favicon.ico" type="image/ico" />
+  </style>
+  <link rel="icon" href="images/favicon.ico" type="image/ico" />
 </head>
 <body>
 
   <div class="navbar">
     <a href="index.html">Home</a>
     <a href="gallery.html">Gallery</a>
-    <div class="stad">
-      <button class="dropbtn"><a href= "Stadium.html">Stadum Ranking</a></button>
-      <div class="stad-content">
-        <a href="Stadium1">1</a>
-        <a href="Stadium2">2</a>
-        <a href="Stadium3">3</a>
-        <a href="Stadium4">4</a>
-        </div>
-        </div>
-    <a href="History.html"> History </a>
-    <a href="Geo-Map.html"> Geo Map </a>
-    <a href="Champions-League.html"> Champions League </a>
+    <a href="Stadium.html">Stadium Ranking</a>
+    <a href="History.html">History</a>
+    <a href="Champions-League.html">Champions League</a>
     <a href="sitemap.html">Site Map</a>
+  </div>
+
+  <article>
+    <header>
+      <h1>The Best Stadiums in Europe</h1>
+    </header>
+      <div>
+        <p class="About-us">
+          This website is here to inform fellow football fans about the best football stadiums to visit across Europe. It was developed by Louis Gazo.
+          Louis has played different levels of professional football, traveled throughout Europe with a football club, and experienced a few different stadiums
+          that are listed on this webpage. 
+          If you are looking to travel or want to incroprate the beautiful game into your plans, consider this webpage. Stadiums are as much artowrk and culture
+          as they are a sporting event. It is very different than the United States as clubs take great pride in this meeting ground. Stadiums have become
+          the modern city center and a place where community and cultures meet. 
+        </p>
       </div>
-      </div>
-
-          <article>
-            <header>
-          <h1>Futbol Stadiums</h1>
-          </header>
-
-          <main>
-            <p>
-          <div class="slide">
-               <div class="show">
-                  <img src="images/CampNou.jpg" alt="CampNou" Title="CampNou">
-                  <img src="images/Anfield.jpg" alt="Anfield" title="Anfield">
-                  <img src="images/BVB.jpg" alt="BVB" title="BVB">
-                  <img src="images/Allianz.jpg" alt="Allianz" title="Allianz">
-               </div>
-              </p>
-              </main>
-
-              <footer>
-<br>
-        <div class="grid-container">
-          <div class="grid-item"><strong><a href="index.html">Home</a></strong></div>
-          <div class="grid-item"><strong><a href="Gallery.html">Gallery</a></strong></div>
-          <div class="grid-item"><strong><a href="Stadium.html">Stadium Ranking</a></strong></div>  
-          <div class="grid-item"><strong><a href="History.html"> History </a></strong></div>
-          <div class="grid-item"><strong><a href="Geo-Map.html"> Geo Map </a></strong></div>
-          <div class="grid-item"><strong><a href="Champions-League.html"> Champions League </a></strong></div>  
-          <div class="grid-item"><strong>Contact</strong>
-          <div><a href="contact.html">Link to Form</a></div>
+      <main>
+        <div class="slide">
+          <div class="show">
+            <img src="images/CampNou.jpg" alt="CampNou" Title="CampNou">
+            <img src="images/Anfield.jpg" alt="Anfield" title="Anfield">
+            <img src="images/BVB.jpg" alt="BVB" title="BVB">
+            <img src="images/Allianz.jpg" alt="Allianz" title="Allianz">
+          </div>
         </div>
-      </br>
+    </main>
+
+    <footer>
+      <div class="grid-container">
+        <div class="grid-item"><strong><a href="index.html">Home</a></strong></div>
+        <div class="grid-item"><strong><a href="Gallery.html">Gallery</a></strong></div>
+        <div class="grid-item"><strong><a href="Stadium.html">Stadium Ranking</a></strong></div>  
+        <div class="grid-item"><strong><a href="History.html">History</a></strong></div>
+        <div class="grid-item"><strong><a href="Champions-League.html">Champions League</a></strong></div>  
+        <div class="grid-item"><strong><a href="contact.html">Contact</a></strong></div>
+      </div>
     </footer>
+  </article>
 </body>
 </html>
