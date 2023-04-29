@@ -1,129 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery</title>
-<style>
-body {
-      background-image: linear-gradient(to right, rgb(219, 242, 248), rgb(54, 200, 248));
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+    <style>
+      body {
+        background-image: linear-gradient(
+          to right,
+          rgb(219, 242, 248),
+          rgb(54, 200, 248)
+        );
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
 
       .navbar {
-  overflow: hidden;
-  background-color: rgb(104, 214, 251);
-}
+        overflow: hidden;
+        background-color: rgb(104, 214, 251);
+      }
 
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+      .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
 
+      .navbar a:hover {
+        background-color: rgb(170, 218, 233);
+      }
 
-.navbar a:hover {
-  background-color: rgb(170, 218, 233);
-}
+      a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
 
-a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
+      article {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: auto;
+        text-align: center;
+        width: 100%;
+      }
 
-article {
-	min-height: 100vh;
-	display: grid;
-	grid-template-rows: auto 1fr auto;
-	grid-template-columns: auto;
-  text-align: center;
-  width: 100%;
-}
+      h1 {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        color: rgb(69, 74, 79);
+        font-size: 30px;
+      }
 
-h1 {
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-      color: rgb(69, 74, 79);
-      font-size: 30px;
-    }
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(7, auto);
-  background-color: rgb(104, 214, 251);
-  padding: 10px;
-  justify-self: start;
-  align-self: end;
-}
-.grid-item {
-  background-color: rgb(104, 214, 251);
-  border: none;
-  padding: 20px;
-  font-size: 15px;
-  color: white;
-  justify-self: start;
-  align-self: start;
-}
-.grid-item:last-child {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-a {
-  text-decoration: none;
-  color: white;
-}
-  img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-  </style>
-      <link rel="icon" href="images/favicon.ico" type="image/ico" />
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(7, auto);
+        background-color: rgb(104, 214, 251);
+        padding: 10px;
+        justify-self: start;
+        align-self: end;
+      }
+      .grid-item {
+        background-color: rgb(104, 214, 251);
+        border: none;
+        padding: 20px;
+        font-size: 15px;
+        color: white;
+        justify-self: start;
+        align-self: start;
+      }
+      .grid-item:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+    <link rel="icon" href="images/favicon.ico" type="image/ico" />
   </head>
   <body>
     <div class="navbar">
       <a href="index.html">Home</a>
       <a href="gallery.html">Gallery</a>
-      <a href= "Stadium.html">Stadium Ranking</a>
+      <a href="Stadium.html">Stadium Ranking</a>
       <a href="History.html"> History </a>
       <a href="Champions-League.html"> Champions League </a>
       <a href="sitemap.html">Site Map</a>
+    </div>
+
+    <article>
+      <header>
+        <h1>Champions League</h1>
+      </header>
+
+      <main>
+        <p>
+          <a href="https://www.uefa.com/uefachampionsleague/standings/"
+            ><img src="images/CL.png" title="Champions League"
+          /></a>
+        </p>
+      </main>
+      <footer>
+        <div class="grid-container">
+          <div class="grid-item">
+            <strong><a href="index.html">Home</a></strong>
+          </div>
+          <div class="grid-item">
+            <strong><a href="Gallery.html">Gallery</a></strong>
+          </div>
+          <div class="grid-item">
+            <strong><a href="Stadium.html">Stadium Ranking</a></strong>
+          </div>
+          <div class="grid-item">
+            <strong><a href="History.html">History</a></strong>
+          </div>
+          <div class="grid-item">
+            <strong
+              ><a href="Champions-League.html">Champions League</a></strong
+            >
+          </div>
+          <div class="grid-item">
+            <strong><a href="contact.html">Contact</a></strong>
+          </div>
         </div>
-        </div>
-  
-            <article>
-              <header>
-            <h1>Champions League</h1>
-            </header>
-  
-            <main>
-              <p>
-                <a href="https://www.uefa.com/uefachampionsleague/standings/"><img src="images/CL.png" title="Champions League"></a>
-                </p>
-                </main>
-                <footer>
-                  <div class="grid-container">
-                    <div class="grid-item"><strong><a href="index.html">Home</a></strong></div>
-                    <div class="grid-item"><strong><a href="Gallery.html">Gallery</a></strong></div>
-                    <div class="grid-item"><strong><a href="Stadium.html">Stadium Ranking</a></strong></div>  
-                    <div class="grid-item"><strong><a href="History.html">History</a></strong></div>
-                    <div class="grid-item"><strong><a href="Champions-League.html">Champions League</a></strong></div>  
-                    <div class="grid-item"><strong><a href="contact.html">Contact</a></strong></div>
-                  </div>
-                </footer>
+      </footer>
+    </article>
   </body>
 </html>

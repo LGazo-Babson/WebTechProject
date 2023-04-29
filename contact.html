@@ -1,197 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
     <style>
-body {
-      background-image: linear-gradient(to right, rgb(219, 242, 248), rgb(54, 200, 248));
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+      body {
+        background-image: linear-gradient(
+          to right,
+          rgb(219, 242, 248),
+          rgb(54, 200, 248)
+        );
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
 
       .navbar {
-  overflow: hidden;
-  background-color: rgb(104, 214, 251);
-}
+        overflow: hidden;
+        background-color: rgb(104, 214, 251);
+      }
 
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+      .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
 
+      .navbar a:hover {
+        background-color: rgb(170, 218, 233);
+      }
 
-.navbar a:hover {
-  background-color: rgb(170, 218, 233);
-}
+      a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
 
-a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
+      article {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: auto;
+        text-align: center;
+        width: 100%;
+      }
 
-article {
-	min-height: 100vh;
-	display: grid;
-	grid-template-rows: auto 1fr auto;
-	grid-template-columns: auto;
-  text-align: center;
-  width: 100%;
-}
+      h1 {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        color: rgb(69, 74, 79);
+        font-size: 30px;
+      }
 
-h1 {
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-      color: rgb(69, 74, 79);
-      font-size: 30px;
-    }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(7, auto);
+        background-color: rgb(104, 214, 251);
+        padding: 10px;
+        justify-self: start;
+        align-self: end;
+      }
+      .grid-item {
+        background-color: rgb(104, 214, 251);
+        border: none;
+        padding: 20px;
+        font-size: 15px;
+        color: white;
+        justify-self: start;
+        align-self: start;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(7, auto);
-  background-color:rgb(104, 214, 251);
-  padding: 10px;
-  justify-self: start;
-align-self: end;}
-.grid-item {
-  background-color: rgb(104, 214, 251);
-  border: none;
-  padding: 20px;
-  font-size: 15px;
-  color: white;
-  justify-self:start;
-  align-self: start;
-}
-a{text-decoration: none;
-color: white;}
+      .form {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        max-width: 800px;
+        margin: 0 auto;
+      }
 
-.form {
-            display: flex;
-            justify-content: center;
-            width: 90%;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-body {
-            background-color: transparent;
-        }
-        
+      body {
+        background-color: transparent;
+      }
 
-form {
-            background-color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        
-.submit-btn {
-            background-color: rgb(104, 214, 251);
-            border: none;
-            padding: 10px 20px;
-            font-size: 15px;
-            color: white;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-        
-.reset-btn {
-            background-color: rgb(236, 235, 235);
-            border: none;
-            padding: 10px 20px;
-            font-size: 15px;
-            color: rgb(69, 74, 79);
-            cursor: pointer;
-        }
+      form {
+        background-color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .submit-btn {
+        background-color: rgb(104, 214, 251);
+        border: none;
+        padding: 10px 20px;
+        font-size: 15px;
+        color: white;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      .reset-btn {
+        background-color: rgb(236, 235, 235);
+        border: none;
+        padding: 10px 20px;
+        font-size: 15px;
+        color: rgb(69, 74, 79);
+        cursor: pointer;
+      }
     </style>
     <link rel="icon" href="images/favicon.ico" type="image/ico" />
-</head>
-<body>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="Stadium.html">Stadium Ranking</a>
+      <a href="History.html"> History </a>
+      <a href="Champions-League.html"> Champions League </a>
+      <a href="sitemap.html">Site Map</a>
+    </div>
+
     <h1>Contact Form</h1>
     <div class="form" id="contact-form">
-    <form method="post" action="https://www.futbolstadiums.live/">
+      <form method="post" action="https://www.futbolstadiums.live/">
         <fieldset>
-            <legend>Your Information:</legend>
-        <div>
+          <legend>Your Information:</legend>
+          <div>
             <label for="FName">First Name:</label>
-      <input
-        type="text"
-        id="FName"
-        name="Name"
-        maxlength="25"
-        placeholder="Enter Your First Name Here"
-      />
-      </div>
-      <div>
-        <label for="LName">Last Name:</label>
-  <input
-    type="text"
-    id="LName"
-    name="Name"
-    maxlength="25"
-    placeholder="Enter Your Last Name Here"
-  />
-  </div>
-      <div>
-      <label for="Email">Email:</label>
-      <input
-        type="text"
-        id="Email"
-        name="Email"
-        maxlength="75"
-        placeholder="Enter Your Email Here"
-        />
-        </div>
-            <div>
-                <label for="Comments">Leave Your Comments:</label>
-        </div>
-        <div>
-          <textarea
-            id="Comments"
-            name="Comments"
-            rows="3"
-            cols="30"
-            placeholder="Leave Your Comments Here"
-          ></textarea>
-            </div>
-            <div>
-                <input type="checkbox" name="email" value="email" checked> 
-                <label for="email">Sign me up for email updates</label> 
-            </div>
-            <div>
-                <button>Submit</button> 
-                <button>Reset</button>
-            </div>
-          </fieldset>
-        </form>
-        </div>
-        <script>
-          const form = document.getElementById("contact-form");
-          const fNameInput = document.getElementById("FName");
-          const lNameInput = document.getElementById("LName");
-          const emailInput = document.getElementById("Email");
-          const commentsInput = document.getElementById("Comments");
-        
-          form.addEventListener("submit", (event) => {
-            event.preventDefault();
-            if (!fNameInput.value || !lNameInput.value || !emailInput.value || !commentsInput.value) {
-              alert("Please fill in all required fields.");
-            } else {
-              form.submit();
-            }
-          });
-        </script>
-</body>
+            <input
+              type="text"
+              id="FName"
+              name="Name"
+              maxlength="25"
+              placeholder="Enter Your First Name Here"
+            />
+          </div>
+          <div>
+            <label for="LName">Last Name:</label>
+            <input
+              type="text"
+              id="LName"
+              name="Name"
+              maxlength="25"
+              placeholder="Enter Your Last Name Here"
+            />
+          </div>
+          <div>
+            <label for="Email">Email:</label>
+            <input
+              type="text"
+              id="Email"
+              name="Email"
+              maxlength="75"
+              placeholder="Enter Your Email Here"
+            />
+          </div>
+          <div>
+            <label for="Comments">Leave Your Comments:</label>
+          </div>
+          <div>
+            <textarea
+              id="Comments"
+              name="Comments"
+              rows="3"
+              cols="30"
+              placeholder="Leave Your Comments Here"
+            ></textarea>
+          </div>
+          <div>
+            <input type="checkbox" name="email" value="email" checked />
+            <label for="email">Sign me up for email updates</label>
+          </div>
+          <div>
+            <button>Submit</button>
+            <button>Reset</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+      const form = document.getElementById("contact-form");
+      const fNameInput = document.getElementById("FName");
+      const lNameInput = document.getElementById("LName");
+      const emailInput = document.getElementById("Email");
+      const commentsInput = document.getElementById("Comments");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (
+          !fNameInput.value ||
+          !lNameInput.value ||
+          !emailInput.value ||
+          !commentsInput.value
+        ) {
+          alert("Please fill in all required fields.");
+        } else {
+          form.submit();
+        }
+      });
+    </script>
+  </body>
 </html>
